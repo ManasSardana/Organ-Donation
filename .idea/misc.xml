@@ -3,7 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_home.xml" value="0.3494791666666667" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3494791666666667" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/about_us_fragment.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_forgot_password_fragment.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_login_fragment.xml" value="0.32916666666666666" />
         <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_main.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_main_page.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_registration_fragment.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_splash_screen.xml" value="0.3109375" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/app_bar_main_page.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/content_main_page.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/donate_fragment.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_home.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/nav_header_main_page.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/profile_fragment.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/menu/activity_main_drawer.xml" value="0.32916666666666666" />
+        <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/menu/main_page.xml" value="0.32916666666666666" />
         <entry key="..\:/Users/Manas Sardana/AndroidStudioProjects/OrganDonation/app/src/main/res/layout/activity_main.xml" value="0.2" />
       </map>
     </option>

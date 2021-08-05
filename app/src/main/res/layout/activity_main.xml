@@ -58,7 +58,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Login"
-        style="@style/Widget.Design.FloatingActionButton"
         android:textColor="#0E0909"
         android:textSize="16sp"
         app:backgroundTint="#F4ECEC"

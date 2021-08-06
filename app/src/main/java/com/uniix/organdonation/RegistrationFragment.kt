@@ -19,6 +19,12 @@ class RegistrationFragment : Fragment() {
     ): View? {
 
         registrationFragment = ActivityRegistrationFragmentBinding.inflate(inflater)
+
+        //Loading Login Fragment
+        registrationFragment.signUpLogin.setOnClickListener {
+            (activity as MainActivity).change(LoginFragment())
+        }
+
         return registrationFragment.root
 
     }

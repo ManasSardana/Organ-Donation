@@ -14,4 +14,22 @@
     <string name="menu_donate">Donate</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_about_us">About Us</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify">Verify</string>
+    <string name="remember_password">Remember Password</string>
+    <string name="do_not_have_account_sign_up">Do not Have Account! Sign Up</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="sign_up_create_account">Sign Up/Create Account</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="aadhar_card_number">Aadhar Card Number</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="create_account">Create Account</string>
+    <string name="pin_code">Pin Code</string>
+    <string name="already_have_account_login">Already have account! Login</string>
 </resources>

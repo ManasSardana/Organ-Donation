@@ -23,12 +23,20 @@
     <include layout="@layout/content_main_page" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/donate"
+        android:layout_width="76dp"
+        android:layout_height="69dp"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/ic_baseline_help_24" />
+        android:backgroundTint="#00BCD4"
+        android:clickable="true"
+        android:drawingCacheQuality="auto"
+        android:tint="#15B5CA"
+        app:fabSize="normal"
+        app:rippleColor="#1375C3"
+        app:srcCompat="@drawable/ic_baseline_help_24"
+        android:focusable="true"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

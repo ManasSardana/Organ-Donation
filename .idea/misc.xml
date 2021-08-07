@@ -24,6 +24,17 @@
         <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/menu/activity_main_drawer.xml" value="0.32916666666666666" />
         <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/menu/main_page.xml" value="0.32916666666666666" />
         <entry key="..\:/Users/Manas Sardana/AndroidStudioProjects/OrganDonation/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_forgot_password_fragment.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_main_page.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_registration_fragment.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_splash_screen.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/app_bar_main_page.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/content_main_page.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_about_us.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_donate.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/nav_header_main_page.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>
@@ -32,5 +43,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22447916666666667" />
+      </ProjectState>
+    </option>
   </component>
 </project>

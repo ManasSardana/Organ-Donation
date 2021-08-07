@@ -1,5 +1,6 @@
 package com.uniix.organdonation
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -26,9 +27,10 @@ class MainPage : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMainPage.toolbar)
 
-        binding.appBarMainPage.fab.setOnClickListener { view ->
+        binding.appBarMainPage.donate.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView

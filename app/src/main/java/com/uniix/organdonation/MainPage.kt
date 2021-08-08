@@ -30,8 +30,10 @@ class MainPage : AppCompatActivity() {
         binding.appBarMainPage.donate.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
-
         }
+
+
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main_page)
@@ -44,6 +46,8 @@ class MainPage : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -56,4 +60,6 @@ class MainPage : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main_page)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+
 }

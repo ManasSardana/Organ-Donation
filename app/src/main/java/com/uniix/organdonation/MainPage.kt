@@ -14,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.uniix.organdonation.databinding.ActivityMainPageBinding
+import com.uniix.organdonation.ui.home.HomeFragment
 
 class MainPage : AppCompatActivity() {
 
@@ -42,12 +43,13 @@ class MainPage : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home,R.id.nav_donate,R.id.nav_profile,R.id.nav_about
+                R.id.nav_home,R.id.nav_profile,R.id.nav_about
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        //supportFragmentManager.beginTransaction().replace(R.id.main_page_host,HomeFragment()).addToBackStack(null).commit()
 
     }
 
@@ -63,6 +65,6 @@ class MainPage : AppCompatActivity() {
     }
 
     fun change(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.host,fragment).addToBackStack(null).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.drawer_layout,fragment).addToBackStack(null).commit()
     }
 }

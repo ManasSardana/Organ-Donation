@@ -32,4 +32,6 @@
     <string name="create_account">Create Account</string>
     <string name="pin_code">Pin Code</string>
     <string name="already_have_account_login">Already have account! Login</string>
+    <string name="menu_pledge">Pledge</string>
+    <string name="menu_eye_donation">Eye Donation</string>
 </resources>

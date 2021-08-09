@@ -11,7 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrganDonation">
         <activity
-            android:name=".ui.home.PledgeActivity"
+            android:name=".ui.eye.EyeDonationFragment"
+            android:exported="true" />
+        <activity
+            android:name=".ui.blood.BloodDonationFragment"
+            android:exported="true" />
+        <activity
+            android:name=".ui.pledge.PledgeFragment"
             android:exported="true"
             tools:ignore="Instantiatable" />
         <activity

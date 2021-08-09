@@ -5,10 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.uniix.organdonation.LoginFragment
-import com.uniix.organdonation.MainActivity
 import com.uniix.organdonation.MainPage
 import com.uniix.organdonation.databinding.FragmentHomeBinding
+import com.uniix.organdonation.ui.pledge.PledgeFragment
 
 class HomeFragment : Fragment() {
 
@@ -24,7 +23,7 @@ class HomeFragment : Fragment() {
         homeFragment = FragmentHomeBinding.inflate(inflater)
 
         homeFragment.textView5.setOnClickListener {
-            (activity as MainPage).change(PledgeActivity())
+            (activity as MainPage).change(PledgeFragment())
         }
         return homeFragment.root
 

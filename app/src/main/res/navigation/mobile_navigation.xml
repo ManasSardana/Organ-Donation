@@ -11,11 +11,6 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_donate"
-        android:name="com.uniix.organdonation.ui.donate.DonateFragment"
-        android:label="@string/menu_donate"
-        tools:layout="@layout/fragment_donate" />
 
     <fragment
         android:id="@+id/nav_profile"
@@ -28,5 +23,17 @@
         android:name="com.uniix.organdonation.ui.about.AboutUsFragment"
         android:label="@string/menu_about_us"
         tools:layout="@layout/fragment_about_us" />
+
+    <fragment
+        android:id="@+id/nav_pledge"
+        android:name="com.uniix.organdonation.ui.pledge.PledgeFragment"
+        android:label="@string/menu_pledge"
+        tools:layout="@layout/fragment_pledge" />
+
+    <fragment
+        android:id="@+id/nav_eye"
+        android:name="com.uniix.organdonation.ui.eye.EyeDonationFragment"
+        android:label="@string/menu_eye_donation"
+        tools:layout="@layout/fragment_eye_donation" />
 
 </navigation>

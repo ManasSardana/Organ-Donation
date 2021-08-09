@@ -21,7 +21,7 @@ class LoginFragment : Fragment() {
 
         loginFragment = ActivityLoginFragmentBinding.inflate(inflater)
 
-        //Inflating to MainPAge
+        //Inflating to MainActivity
         loginFragment.login.setOnClickListener {
             activity?.startActivity(Intent(context, MainPage::class.java))
         }

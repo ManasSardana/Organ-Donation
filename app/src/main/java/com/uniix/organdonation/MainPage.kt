@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.uniix.organdonation.databinding.ActivityMainPageBinding
 
 class MainPage : AppCompatActivity() {
@@ -61,5 +62,7 @@ class MainPage : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-
+    fun change(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.host,fragment).addToBackStack(null).commit()
+    }
 }

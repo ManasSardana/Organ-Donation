@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@drawable/background"
     tools:context=".LoginFragment">
 
     <ScrollView
@@ -17,27 +16,15 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:text="@string/login"
-                android:textColor="#F6ECEC"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="64dp"
                 android:layout_marginEnd="16dp"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="6dp"
@@ -47,10 +34,10 @@
                 android:minHeight="48dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:textColorHint="#E8E2E2"
+                android:textColorHint="@android:color/darker_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/login_logo" />
 
             <EditText
                 android:id="@+id/login_password"
@@ -67,7 +54,7 @@
                 android:minHeight="48dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:textColorHint="#E8E2E2"
+                android:textColorHint="@android:color/darker_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/login_email" />
@@ -76,11 +63,10 @@
                 android:id="@+id/login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="56dp"
                 android:text="@string/login"
-                android:textColor="#0E0909"
+                android:textColor="@color/white"
                 android:textSize="16sp"
-                app:backgroundTint="#F4ECEC"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/login_password" />
@@ -89,7 +75,7 @@
                 android:id="@+id/forget_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="32dp"
                 android:text="@string/forget_password"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -108,6 +94,17 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/forget_password" />
+
+            <ImageView
+                android:id="@+id/login_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="96dp"
+                android:contentDescription="@drawable/orgdo_logo"
+                android:src="@drawable/orgdo_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

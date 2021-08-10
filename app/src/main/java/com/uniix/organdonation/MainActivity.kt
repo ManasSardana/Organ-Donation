@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         val dialog = AlertDialog.Builder(this)
-        dialog.setTitle("Quick Shop")
+        dialog.setTitle("Organ Donation")
         dialog.setMessage("Do you want to close this application?")
         dialog.setCancelable(false)
         dialog.setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->

@@ -29,8 +29,8 @@ class MainPage : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMainPage.toolbar)
 
-        binding.appBarMainPage.donate.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        binding.appBarMainPage.fab.setOnClickListener { view ->
+            Snackbar.make(view, "Help and Documentation", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
 

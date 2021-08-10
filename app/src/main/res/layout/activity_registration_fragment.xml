@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@drawable/background"
     tools:context=".RegistrationFragment">
 
     <ScrollView
@@ -19,45 +18,25 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/registration_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:id="@+id/registration_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="96dp"
                 android:contentDescription="@drawable/enrollment"
-                android:src="@drawable/enrollment"
+                android:src="@drawable/orgdo_logo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/name"
+                android:id="@+id/registration_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="16dp"
-                android:drawableStart="@drawable/ic_baseline_person_24"
-                android:drawablePadding="6dp"
-                android:ems="50"
-                android:hint="@string/name"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:textColorHint="#F8F8F8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registration_image" />
-
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="56dp"
                 android:layout_marginEnd="16dp"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="6dp"
@@ -67,33 +46,13 @@
                 android:minHeight="48dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:textColorHint="#F8F8F8"
+                android:textColorHint="@android:color/darker_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/name" />
+                app:layout_constraintTop_toBottomOf="@+id/registration_logo" />
 
             <EditText
-                android:id="@+id/phone_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:drawableStart="@drawable/ic_baseline_phone_24"
-                android:drawablePadding="6dp"
-                android:ems="50"
-                android:hint="@string/phone_number"
-                android:inputType="phone"
-                android:minHeight="48dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:textColorHint="#F8F8F8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/email" />
-
-            <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/registration_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -107,92 +66,30 @@
                 android:minHeight="48dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:textColorHint="#F8F8F8"
+                android:textColorHint="@android:color/darker_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phone_number" />
+                app:layout_constraintTop_toBottomOf="@+id/registration_email" />
 
             <EditText
-                android:id="@+id/address"
+                android:id="@+id/registration_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:drawableStart="@drawable/ic_baseline_person_pin_circle"
+                android:drawableStart="@drawable/ic_key"
                 android:drawablePadding="6dp"
                 android:ems="50"
-                android:hint="@string/address"
-                android:inputType="textPostalAddress"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:textColorHint="#F8F8F8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
-
-            <EditText
-                android:id="@+id/pin_code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:drawableStart="@drawable/ic_baseline_person_pin_circle"
-                android:drawablePadding="6dp"
-                android:ems="50"
-                android:hint="@string/pin_code"
-                android:inputType="textPostalAddress"
-                android:minHeight="48dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:textColorHint="#F8F8F8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/address" />
-
-            <EditText
-                android:id="@+id/aadhar_card_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:drawableStart="@drawable/ic_baseline_credit_card"
-                android:drawablePadding="6dp"
-                android:ems="50"
-                android:hint="@string/aadhar_card_number"
-                android:inputType="number"
-                android:minHeight="48dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:textColorHint="#F8F8F8"
+                android:textColorHint="@android:color/darker_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pin_code" />
-
-            <EditText
-                android:id="@+id/dob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:drawableStart="@drawable/ic_baseline_date_range"
-                android:drawablePadding="6dp"
-                android:ems="50"
-                android:hint="@string/date_of_birth"
-                android:inputType="date"
-                android:minHeight="48dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:textColorHint="#F8F8F8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/aadhar_card_number" />
+                app:layout_constraintTop_toBottomOf="@+id/registration_password" />
 
             <Button
                 android:id="@+id/sign_up"
@@ -202,13 +99,13 @@
                 android:text="@string/create_account"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blood_group" />
+                app:layout_constraintTop_toBottomOf="@+id/registration_confirm_password" />
 
             <TextView
                 android:id="@+id/sign_up_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginBottom="24dp"
                 android:text="@string/already_have_account_login"
                 android:textSize="20sp"
@@ -218,26 +115,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sign_up"
                 app:layout_constraintVertical_bias="1.0" />
-
-            <Spinner
-                android:id="@+id/blood_group"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:minHeight="48dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dob" />
-
-            <Spinner
-                android:id="@+id/gender"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:minHeight="48dp"
-                app:layout_constraintStart_toEndOf="@+id/blood_group"
-                app:layout_constraintTop_toBottomOf="@+id/dob" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

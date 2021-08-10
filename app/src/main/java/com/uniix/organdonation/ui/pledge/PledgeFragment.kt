@@ -10,13 +10,11 @@ import com.uniix.organdonation.databinding.FragmentPledgeBinding
 class PledgeFragment : Fragment() {
     lateinit var pledgeActivity : FragmentPledgeBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?
     ): View? {
 
         pledgeActivity= FragmentPledgeBinding.inflate(inflater)
+
         
         return pledgeActivity.root
     }

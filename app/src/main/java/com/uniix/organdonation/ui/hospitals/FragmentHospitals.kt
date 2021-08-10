@@ -1,4 +1,4 @@
-package com.uniix.organdonation.ui.eye
+package com.uniix.organdonation.ui.hospitals
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,17 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.uniix.organdonation.R
-import com.uniix.organdonation.databinding.FragmentEyeDonationBinding
+import com.uniix.organdonation.databinding.FragmentHospitalsBinding
 
-class EyeDonationFragment : Fragment(){
-    lateinit var EyeDonationFragment : FragmentEyeDonationBinding
+class FragmentHospitals : Fragment(){
+    lateinit var FragmentHospitals : FragmentHospitalsBinding
 
     override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?
     ): View? {
-        EyeDonationFragment = FragmentEyeDonationBinding.inflate(inflater)
+        FragmentHospitals = FragmentHospitalsBinding.inflate(inflater)
 
 
-
-        return EyeDonationFragment.root
+        return FragmentHospitals.root
     }
 }

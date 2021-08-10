@@ -11,11 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrganDonation">
         <activity
+            android:name=".ui.hospitals.FragmentHospitals"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".ui.organ.FragmentOrgan"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
             android:name=".ui.eye.EyeDonationFragment"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".ui.blood.BloodDonationFragment"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".ui.pledge.PledgeFragment"
             android:exported="true"

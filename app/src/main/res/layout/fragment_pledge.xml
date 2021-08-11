@@ -180,35 +180,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
-    <RadioButton
-        android:id="@+id/radioButton8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/any_part_of_body"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <RadioButton
-        android:id="@+id/radioButton9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/or"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton8" />
-
     <RadioGroup
         android:id="@+id/radioGroup3"
-        android:layout_width="134dp"
-        android:layout_height="206dp"
+        android:layout_width="125dp"
+        android:layout_height="277dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@+id/radioButton9"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton8">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <CheckBox
             android:id="@+id/checkBox2"
@@ -256,6 +236,17 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/pancreas"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="50"
+
+            android:hint="Others"
+            android:inputType="textPersonName"
             tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
 
@@ -329,5 +320,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pledge_email" />
+
+    <Button
+        android:id="@+id/pledge_submit_btn"
+        android:layout_width="110dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:background="#9502DF"
+        android:text="submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pledge_phone_number" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

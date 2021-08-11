@@ -66,4 +66,7 @@
     <string name="blood_donation">Blood Donation</string>
     <string name="donate_organ">Donate Organ</string>
     <string name="save_a_life">SAVE A LIFE</string>
+    <string name="menu_blood_donation">Blood Donation</string>
+    <string name="menu_organ_donation">Organ Donation</string>
+    <string name="menu_hospitals">Hospitals</string>
 </resources>

@@ -9,6 +9,8 @@ import com.uniix.organdonation.MainPage
 import com.uniix.organdonation.databinding.FragmentHomeBinding
 import com.uniix.organdonation.ui.blood.BloodDonationFragment
 import com.uniix.organdonation.ui.eye.EyeDonationFragment
+import com.uniix.organdonation.ui.hospitals.FragmentHospitals
+import com.uniix.organdonation.ui.organ.FragmentOrgan
 import com.uniix.organdonation.ui.pledge.PledgeFragment
 
 class HomeFragment : Fragment() {
@@ -37,12 +39,28 @@ class HomeFragment : Fragment() {
             (activity as MainPage).change(BloodDonationFragment())
         }
 
-        homeFragment.blood.setOnClickListener {
+        homeFragment.eye.setOnClickListener {
             (activity as MainPage).change(EyeDonationFragment())
         }
 
-        homeFragment.bloodImage.setOnClickListener {
+        homeFragment.eyeImage.setOnClickListener {
             (activity as MainPage).change(EyeDonationFragment())
+        }
+
+        homeFragment.organ.setOnClickListener {
+            (activity as MainPage).change(FragmentOrgan())
+        }
+
+        homeFragment.organImage.setOnClickListener {
+            (activity as MainPage).change(FragmentOrgan())
+        }
+
+        homeFragment.hospitals.setOnClickListener {
+            (activity as MainPage).change(FragmentHospitals())
+        }
+
+        homeFragment.hospitalImage.setOnClickListener {
+            (activity as MainPage).change(FragmentHospitals())
         }
 
         return homeFragment.root

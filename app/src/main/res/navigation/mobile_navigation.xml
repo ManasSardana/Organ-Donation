@@ -36,4 +36,22 @@
         android:label="@string/menu_eye_donation"
         tools:layout="@layout/fragment_eye_donation" />
 
+    <fragment
+        android:id="@+id/nav_blood"
+        android:name="com.uniix.organdonation.ui.blood.BloodDonationFragment"
+        android:label="@string/menu_blood_donation"
+        tools:layout="@layout/fragment_blood_donation" />
+
+    <fragment
+        android:id="@+id/nav_organ"
+        android:name="com.uniix.organdonation.ui.organ.FragmentOrgan"
+        android:label="@string/menu_organ_donation"
+        tools:layout="@layout/fragment_organ" />
+
+    <fragment
+        android:id="@+id/nav_hospitals"
+        android:name="com.uniix.organdonation.ui.hospitals.FragmentHospitals"
+        android:label="@string/menu_hospitals"
+        tools:layout="@layout/fragment_hospitals" />
+
 </navigation>

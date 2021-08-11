@@ -217,13 +217,13 @@
 
         <RadioButton
             android:id="@+id/radioButton9"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/any_part_of_body" />
 
         <RadioButton
             android:id="@+id/radioButton8"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/or" />
 

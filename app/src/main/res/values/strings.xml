@@ -61,4 +61,9 @@
     <string name="enter_your_city_with_pincode">Enter your City with pincode</string>
     <string name="enter_your_email">Enter your email</string>
     <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="hospitals">Hospitals</string>
+    <string name="eye_donation">Eye Donation</string>
+    <string name="blood_donation">Blood Donation</string>
+    <string name="donate_organ">Donate Organ</string>
+    <string name="save_a_life">SAVE A LIFE</string>
 </resources>

@@ -24,21 +24,30 @@
         <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/menu/activity_main_drawer.xml" value="0.32916666666666666" />
         <entry key="..\:/Users/Ankit Singh/AndroidStudioProjects/Organ-Donation/app/src/main/res/menu/main_page.xml" value="0.32916666666666666" />
         <entry key="..\:/Users/Manas Sardana/AndroidStudioProjects/OrganDonation/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_baseline_help_24.xml" value="0.3106481481481482" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_baseline_person_pin_circle.xml" value="0.3106481481481482" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.3106481481481482" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_email.xml" value="0.3106481481481482" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_home.xml" value="0.3106481481481482" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_key.xml" value="0.3106481481481482" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/spinner_style.xml" value="0.3106481481481482" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_forgot_password_fragment.xml" value="0.29030797101449274" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_login_fragment.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_main.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_main_page.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_pledge.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_registration_fragment.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_splash_screen.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/app_bar_main_page.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/content_main_page.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_blood_donation.xml" value="0.29259259259259257" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_forgot_password_fragment.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_login_fragment.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_main_page.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_pledge.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_registration_fragment.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/app_bar_main_page.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_about_us.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_blood_donation.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_donate.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_eye_donation.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_pledge.xml" value="0.25" />
-        <entry key="..\:/Users/varun/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_pledge.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/nav_header_main_page.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/spinner_list.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/spinner_style.xml" value="0.29259259259259257" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/menu/main_page.xml" value="0.29259259259259257" />
       </map>
     </option>
   </component>

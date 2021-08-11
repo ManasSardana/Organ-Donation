@@ -16,7 +16,7 @@
         android:background="#9502DF"
         android:fontFamily="monospace"
         android:includeFontPadding="true"
-        android:text="SAVE A LIFE"
+        android:text="@string/save_a_life"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#F6F2F6"
@@ -32,91 +32,95 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/organ_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="53dp"
         android:src="@drawable/humanbody"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_home" />
+        app:layout_constraintTop_toBottomOf="@+id/title_home"
+        android:contentDescription="@drawable/humanbody" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/blood_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="32dp"
         android:src="@drawable/blood"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_home" />
+        app:layout_constraintTop_toBottomOf="@+id/title_home"
+        android:contentDescription="@drawable/blood" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/eye_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="101dp"
         android:src="@drawable/eye"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/organ_image"
+        android:contentDescription="@drawable/eye" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/pledge_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="101dp"
         android:layout_marginEnd="32dp"
         android:src="@drawable/receive"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/blood_image"
+        android:contentDescription="@drawable/receive" />
 
     <TextView
         android:id="@+id/organ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Donate Organ"
+        android:text="@string/donate_organ"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintEnd_toEndOf="@+id/organ_image"
+        app:layout_constraintStart_toStartOf="@+id/organ_image"
+        app:layout_constraintTop_toBottomOf="@+id/organ_image" />
 
     <TextView
         android:id="@+id/blood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Blood Donation"
+        android:text="@string/blood_donation"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintEnd_toEndOf="@+id/blood_image"
+        app:layout_constraintStart_toStartOf="@+id/blood_image"
+        app:layout_constraintTop_toBottomOf="@+id/blood_image" />
 
     <TextView
         android:id="@+id/eye"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Eye Donation"
+        android:text="@string/eye_donation"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintEnd_toEndOf="@+id/eye_image"
+        app:layout_constraintStart_toStartOf="@+id/eye_image"
+        app:layout_constraintTop_toBottomOf="@+id/eye_image" />
 
     <TextView
         android:id="@+id/pledge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Pledge"
+        android:text="@string/pledge"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintEnd_toEndOf="@+id/pledge_image"
+        app:layout_constraintStart_toStartOf="@+id/pledge_image"
+        app:layout_constraintTop_toBottomOf="@+id/pledge_image" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/hospital_image"
         android:layout_width="127dp"
         android:layout_height="113dp"
         android:layout_marginStart="142dp"
@@ -126,16 +130,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_home" />
+        app:layout_constraintTop_toBottomOf="@+id/title_home"
+        android:contentDescription="@drawable/hospitals" />
 
     <TextView
         android:id="@+id/hospitals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Hospitals"
+        android:text="@string/hospitals"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintEnd_toEndOf="@+id/hospital_image"
+        app:layout_constraintStart_toStartOf="@+id/hospital_image"
+        app:layout_constraintTop_toBottomOf="@+id/hospital_image" />
 </androidx.constraintlayout.widget.ConstraintLayout>

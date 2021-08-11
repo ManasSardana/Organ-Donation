@@ -21,31 +21,29 @@ class HomeFragment : Fragment() {
 
         homeFragment = FragmentHomeBinding.inflate(inflater)
 
-        homeFragment.textView5.setOnClickListener {
+        homeFragment.pledge.setOnClickListener {
             (activity as MainPage).change(PledgeFragment())
         }
 
-        homeFragment.imageView5.setOnClickListener {
+        homeFragment.pledgeImage.setOnClickListener {
             (activity as MainPage).change(PledgeFragment())
         }
 
-        homeFragment.textView3.setOnClickListener {
+        homeFragment.blood.setOnClickListener {
             (activity as MainPage).change(BloodDonationFragment())
         }
 
-        homeFragment.imageView3.setOnClickListener {
+        homeFragment.bloodImage.setOnClickListener {
             (activity as MainPage).change(BloodDonationFragment())
         }
 
-        homeFragment.textView4.setOnClickListener {
+        homeFragment.blood.setOnClickListener {
             (activity as MainPage).change(EyeDonationFragment())
         }
 
-        homeFragment.textView4.setOnClickListener {
+        homeFragment.bloodImage.setOnClickListener {
             (activity as MainPage).change(EyeDonationFragment())
         }
-
-
 
         return homeFragment.root
 

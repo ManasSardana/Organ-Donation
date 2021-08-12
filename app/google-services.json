@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1004334091650",
+    "project_id": "orgdo-e94c9",
+    "storage_bucket": "orgdo-e94c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004334091650:android:1fb531cdfa95b1a30a939b",
+        "android_client_info": {
+          "package_name": "com.uniix.organdonation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004334091650-35vg0oh23mr5lm98sm17svtl74o9j92t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDctnu0nQJL8mFnn-efTan_pp6mQxCK1qU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004334091650-35vg0oh23mr5lm98sm17svtl74o9j92t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

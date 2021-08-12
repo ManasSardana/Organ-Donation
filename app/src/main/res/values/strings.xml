@@ -62,9 +62,9 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="enter_your_phone_number">Enter your phone number</string>
     <string name="hospitals">Hospitals</string>
-    <string name="eye_donation">Eye Donation</string>
-    <string name="blood_donation">Blood Donation</string>
-    <string name="donate_organ">Donate Organ</string>
+    <string name="eye_donation">Eye Donation \n Hospitals</string>
+    <string name="blood_donation">Blood Donation \n Hospitals</string>
+    <string name="organ_donation">Organ Donation \n Hospitals</string>
     <string name="save_a_life">SAVE A LIFE</string>
     <string name="menu_blood_donation">Blood Donation</string>
     <string name="menu_organ_donation">Organ Donation</string>
@@ -74,4 +74,8 @@
         Please refer to the help section for instructions and rules!</string>
     <string name="textview">TextView</string>
     <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="more_options">More Options</string>
+    <string name="let_us_save_a_life_be_a_donor">Let Us Save a Life, Be a Donor</string>
+    <string name="delete_profile">Delete Profile</string>
 </resources>

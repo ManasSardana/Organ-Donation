@@ -7,150 +7,181 @@
     android:background="@color/floral_white"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/title_home"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#9502DF"
-        android:fontFamily="monospace"
-        android:includeFontPadding="true"
-        android:text="@string/save_a_life"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#F6F2F6"
-        android:textColorHighlight="#BF1E1E"
-        android:textColorHint="#F63606"
-        android:textColorLink="#9C27B0"
-        android:textIsSelectable="true"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/organ_image"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="56dp"
-        android:background="@color/purple_900"
-        android:contentDescription="@drawable/humanbody"
-        android:src="@drawable/humanbody"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_home" />
-
-    <ImageView
-        android:id="@+id/blood_image"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/purple_900"
-        android:contentDescription="@drawable/blood"
-        android:src="@drawable/blood"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_home" />
-
-    <ImageView
-        android:id="@+id/eye_image"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="56dp"
-        android:background="@color/purple_900"
-        android:contentDescription="@drawable/eye"
-        android:src="@drawable/eye"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/organ" />
-
-    <ImageView
-        android:id="@+id/pledge_image"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/purple_900"
-        android:contentDescription="@drawable/receive"
-        android:src="@drawable/receive"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blood"
-        tools:ignore="ImageContrastCheck" />
-
-    <TextView
-        android:id="@+id/organ"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_100"
-        android:gravity="center"
-        android:text="@string/donate_organ"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/organ_image"
-        app:layout_constraintStart_toStartOf="@+id/organ_image"
-        app:layout_constraintTop_toBottomOf="@+id/organ_image" />
-
-    <TextView
-        android:id="@+id/blood"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_100"
-        android:gravity="center"
-        android:text="@string/blood_donation"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/blood_image"
-        app:layout_constraintStart_toStartOf="@+id/blood_image"
-        app:layout_constraintTop_toBottomOf="@+id/blood_image" />
-
-    <TextView
-        android:id="@+id/eye"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_100"
-        android:gravity="center"
-        android:text="@string/eye_donation"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/eye_image"
-        app:layout_constraintStart_toStartOf="@+id/eye_image"
-        app:layout_constraintTop_toBottomOf="@+id/eye_image" />
-
-    <TextView
-        android:id="@+id/pledge"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_100"
-        android:gravity="center"
-        android:text="@string/pledge"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/pledge_image"
-        app:layout_constraintStart_toStartOf="@+id/pledge_image"
-        app:layout_constraintTop_toBottomOf="@+id/pledge_image" />
-
-    <ImageView
-        android:id="@+id/hospital_image"
-        android:layout_width="150dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="56dp"
-        android:background="@color/purple_900"
-        android:contentDescription="@drawable/hospitals"
-        android:src="@drawable/hospitals"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eye"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
 
-    <TextView
-        android:id="@+id/hospitals"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_100"
-        android:gravity="center"
-        android:text="@string/hospitals"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/hospital_image"
-        app:layout_constraintStart_toStartOf="@+id/hospital_image"
-        app:layout_constraintTop_toBottomOf="@+id/hospital_image" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/floral_white"
+            tools:context=".ui.home.HomeFragment">
+
+            <TextView
+                android:id="@+id/title_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#9502DF"
+                android:fontFamily="monospace"
+                android:includeFontPadding="true"
+                android:text="@string/save_a_life"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#F6F2F6"
+                android:textColorHighlight="#BF1E1E"
+                android:textColorHint="#F63606"
+                android:textColorLink="#9C27B0"
+                android:textIsSelectable="true"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/organ_image"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="56dp"
+                android:background="@drawable/above_home_image"
+                android:contentDescription="@drawable/humanbody"
+                android:padding="8dp"
+                android:src="@drawable/humanbody"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_home" />
+
+            <ImageView
+                android:id="@+id/blood_image"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/above_home_image"
+                android:contentDescription="@drawable/blood"
+                android:padding="8dp"
+                android:src="@drawable/blood"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_home" />
+
+            <ImageView
+                android:id="@+id/eye_image"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="56dp"
+                android:background="@drawable/above_home_image"
+                android:contentDescription="@drawable/eye"
+                android:padding="8dp"
+                android:src="@drawable/eye"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/organ" />
+
+            <ImageView
+                android:id="@+id/pledge_image"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/above_home_image"
+                android:contentDescription="@drawable/receive"
+                android:padding="8dp"
+                android:src="@drawable/receive"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blood"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/organ"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/below_home_image"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/organ_donation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintEnd_toEndOf="@+id/organ_image"
+                app:layout_constraintStart_toStartOf="@+id/organ_image"
+                app:layout_constraintTop_toBottomOf="@+id/organ_image" />
+
+            <TextView
+                android:id="@+id/blood"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/below_home_image"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/blood_donation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintEnd_toEndOf="@+id/blood_image"
+                app:layout_constraintStart_toStartOf="@+id/blood_image"
+                app:layout_constraintTop_toBottomOf="@+id/blood_image" />
+
+            <TextView
+                android:id="@+id/eye"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/below_home_image"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/eye_donation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintEnd_toEndOf="@+id/eye_image"
+                app:layout_constraintStart_toStartOf="@+id/eye_image"
+                app:layout_constraintTop_toBottomOf="@+id/eye_image" />
+
+            <TextView
+                android:id="@+id/pledge"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/below_home_image"
+                android:gravity="center"
+                android:lines="2"
+                android:padding="8dp"
+                android:text="@string/pledge"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintEnd_toEndOf="@+id/pledge_image"
+                app:layout_constraintStart_toStartOf="@+id/pledge_image"
+                app:layout_constraintTop_toBottomOf="@+id/pledge_image" />
+
+            <ImageView
+                android:id="@+id/hospital_image"
+                android:layout_width="150dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="56dp"
+                android:background="@drawable/above_home_image"
+                android:contentDescription="@drawable/hospitals"
+                android:padding="8dp"
+                android:src="@drawable/hospitals"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eye"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/hospitals"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/below_home_image"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/hospitals"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintEnd_toEndOf="@+id/hospital_image"
+                app:layout_constraintStart_toStartOf="@+id/hospital_image"
+                app:layout_constraintTop_toBottomOf="@+id/hospital_image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

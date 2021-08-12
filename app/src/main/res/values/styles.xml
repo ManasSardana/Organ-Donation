@@ -14,4 +14,13 @@
         <item name="showMotionSpec">@animator/design_fab_show_motion_spec</item>
         <item name="hideMotionSpec">@animator/design_fab_hide_motion_spec</item>
     </style>
+    <style name="BottomNavigationView" parent="">
+        <item name="elevation">@dimen/design_bottom_navigation_elevation</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="enforceMaterialTheme">false</item>
+        <item name="itemBackground">@drawable/delete_profile_button</item>
+        <item name="itemHorizontalTranslationEnabled">true</item>
+        <item name="itemIconSize">@dimen/design_bottom_navigation_icon_size</item>
+        <item name="labelVisibilityMode">auto</item>
+    </style>
 </resources>

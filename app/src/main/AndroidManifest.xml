@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrganDonation">
         <activity
+            android:name=".ui.help.HelpInstructionFragment"
+            android:exported="true" />
+        <activity
             android:name=".ui.hospitals.FragmentHospitals"
             android:exported="true"
             tools:ignore="Instantiatable" />

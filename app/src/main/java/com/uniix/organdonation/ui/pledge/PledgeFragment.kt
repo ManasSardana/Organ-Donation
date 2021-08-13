@@ -130,19 +130,19 @@ class PledgeFragment : Fragment() {
             pancreas = "Pancreas"
         }
         if(pledgeFragment.checkBox2.isChecked) {
-            corneas = ", Corneas"
+            corneas = " Corneas"
         }
         if(pledgeFragment.checkBox3.isChecked) {
-            kidneys = ", Kidneys"
+            kidneys = " Kidneys"
         }
         if(pledgeFragment.checkBox4.isChecked) {
-            heart = ", Heart"
+            heart = " Heart"
         }
         if(pledgeFragment.checkBox5.isChecked) {
-            lungs = ", Lungs"
+            lungs = " Lungs"
         }
         if(pledgeFragment.checkBox6.isChecked) {
-            liver = ", Liver"
+            liver = " Liver"
         }
         someBodyPart = "$pancreas$corneas$kidneys$heart$lungs$liver"
         return someBodyPart

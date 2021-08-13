@@ -34,12 +34,12 @@ class FragmentOrgan : Fragment(){
                 val hospitalArray: JSONArray = JSONArray(it)
                 for (i in 0 until hospitalArray.length()) {
                     val hospitalDetails: JSONObject = hospitalArray.get(i) as JSONObject
-                    val productModelDetails = HospitalDetailsModel(hospitalDetails.getString("name").toString()
+                    val hospitalModelDetails = HospitalDetailsModel(hospitalDetails.getString("name").toString()
                         , (hospitalDetails.getString("email").toString())
                         , (hospitalDetails.getString("phonenumber").toString())
                         , (hospitalDetails.getString("description").toString())
                         , (hospitalDetails.getString("image").toString()))
-                    data.add(productModelDetails)
+                    data.add(hospitalModelDetails)
                 }
                 //Log.d("Data", data[0].name)
                 fragmentOrgan.organDonationHospitalsDetails.layoutManager = LinearLayoutManager(context)

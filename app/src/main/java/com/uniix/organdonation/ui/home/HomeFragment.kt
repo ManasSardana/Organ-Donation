@@ -89,24 +89,17 @@ class HomeFragment : Fragment() {
                 for (i in 0 until profileArray.length()) {
                     val userDetails: JSONObject = profileArray.get(i) as JSONObject
                     if (auth.currentUser!!.email != userDetails.getString("email")) {
-                        //Do Nothing
+                        (activity as MainPage).change(PledgeFragment())
                     } else {
-                        Snackbar.make(
-                            homeFragment.root,
-                            "Hurray!, You have already taken the pledge!",
-                            Snackbar.LENGTH_LONG
-                        ).show()
+                        Toast.makeText(context, "Hurray!, You have already taken the pledge!",
+                            Toast.LENGTH_LONG).show()
                         break
                     }
                 }
             }, {
                 //Log.d("Error",it.toString())
                 if (it.networkResponse.statusCode == 404) {
-                    Snackbar.make(
-                        homeFragment.root,
-                        "Please try again later !!",
-                        Snackbar.LENGTH_LONG
-                    ).show()
+                    Toast.makeText(context, "Please try again later !!", Toast.LENGTH_LONG).show()
                 }
             })
         request.add(stringRequest)

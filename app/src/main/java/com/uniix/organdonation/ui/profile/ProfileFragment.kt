@@ -63,17 +63,17 @@ class ProfileFragment : Fragment() {
                         cityPincode = userDetails.getString("citypincode").toString()
                         email = userDetails.getString("email").toString()
                         phoneNumber = userDetails.getString("phonenumber").toString()
+                        profileFragment.profileName.text = name
+                        profileFragment.profileDob.text = dob
+                        profileFragment.profileBloodGroup.text = bloodGroup
+                        profileFragment.profileGender.text = gender
+                        profileFragment.profileParts.text = bodyPart
+                        profileFragment.profileAddress.text = address
+                        profileFragment.profileCityPincode.text = cityPincode
+                        profileFragment.profileEmail.text = email
+                        profileFragment.profilePhoneNumber.text = phoneNumber
                         break
                     }
-                    profileFragment.profileName.text = name
-                    profileFragment.profileDob.text = dob
-                    profileFragment.profileBloodGroup.text = bloodGroup
-                    profileFragment.profileGender.text = gender
-                    profileFragment.profileParts.text = bodyPart
-                    profileFragment.profileAddress.text = address
-                    profileFragment.profileCityPincode.text = cityPincode
-                    profileFragment.profileEmail.text = email
-                    profileFragment.profilePhoneNumber.text = phoneNumber
                 }
             }, {
                 //Log.d("Error",it.toString())

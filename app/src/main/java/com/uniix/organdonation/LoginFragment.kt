@@ -41,15 +41,7 @@ class LoginFragment : Fragment() {
             val email = loginFragment.loginEmail.text.toString()
             val password = loginFragment.loginPassword.text.toString()
             if (email.trim().isNotEmpty() && password.trim().isNotEmpty()) {
-                if (email == auth.currentUser!!.email) {
-                    login(email, password)
-                } else {
-                    Snackbar.make(
-                        loginFragment.root,
-                        "Please use the same email with which you have registered the app",
-                        Snackbar.LENGTH_LONG
-                    ).show()
-                }
+                login(email, password)
             } else {
                 Snackbar.make(loginFragment.root,
                     "Please enter the credentials",

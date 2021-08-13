@@ -29,28 +29,20 @@ class ForgotPasswordFragment : Fragment() {
         forgotPasswordFragment.fgPasswordLink.setOnClickListener {
             val email = forgotPasswordFragment.fgEmail.text.toString()
             if (email.trim().isNotEmpty()){
-                if (email == auth.currentUser!!.email) {
-                    val eMail = forgotPasswordFragment.fgEmail.text.toString()
-                    //auth = Firebase.auth
-                    auth.sendPasswordResetEmail(eMail)
-                        .addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                Snackbar.make(forgotPasswordFragment.root,
-                                    "Password Reset Link Send to your Email",
-                                    Snackbar.LENGTH_LONG).show()
-                            } else {
-                                Snackbar.make(forgotPasswordFragment.root,
-                                    "Something went wrong, Please try again later!!",
-                                    Snackbar.LENGTH_LONG).show()
-                            }
+                val eMail = forgotPasswordFragment.fgEmail.text.toString()
+                //auth = Firebase.auth
+                auth.sendPasswordResetEmail(eMail)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Snackbar.make(forgotPasswordFragment.root,
+                                "Password Reset Link Send to your Email",
+                                Snackbar.LENGTH_LONG).show()
+                        } else {
+                            Snackbar.make(forgotPasswordFragment.root,
+                                "Something went wrong, Please try again later!!",
+                                Snackbar.LENGTH_LONG).show()
                         }
-                } else {
-                    Snackbar.make(
-                        forgotPasswordFragment.root,
-                        "Please use the same email with which you have registered the app",
-                        Snackbar.LENGTH_LONG
-                    ).show()
-                }
+                    }
             } else {
                 Snackbar.make(forgotPasswordFragment.root,
                     "Please enter the credentials",

@@ -88,7 +88,7 @@ class LoginFragment : Fragment() {
                     }
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(context, task.exception!!.message.toString(),
+                    Toast.makeText(context, "Something went wrong, Please try again later!!",
                         Toast.LENGTH_SHORT).show()
                 }
             }

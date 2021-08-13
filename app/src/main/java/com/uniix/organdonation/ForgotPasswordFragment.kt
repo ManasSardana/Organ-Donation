@@ -40,7 +40,7 @@ class ForgotPasswordFragment : Fragment() {
                                     Snackbar.LENGTH_LONG).show()
                             } else {
                                 Snackbar.make(forgotPasswordFragment.root,
-                                    task.exception!!.message.toString(),
+                                    "Something went wrong, Please try again later!!",
                                     Snackbar.LENGTH_LONG).show()
                             }
                         }

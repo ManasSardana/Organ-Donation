@@ -1,5 +1,6 @@
 package com.uniix.organdonation.ui.pledge
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -168,7 +169,7 @@ class PledgeFragment : Fragment() {
                 Log.d("Response", it.toString())
                 Snackbar.make(pledgeFragment.root, "Submission Successful", Snackbar.LENGTH_SHORT)
                     .show()
-                (activity as MainPage).change(HomeFragment())
+                activity?.startActivity(Intent(context, MainPage::class.java))
             },
             Response.ErrorListener {
                 Log.d("Server", it.toString())

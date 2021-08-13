@@ -10,7 +10,6 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.uniix.organdonation.MainPage
 import com.uniix.organdonation.databinding.FragmentHomeBinding
@@ -38,11 +37,11 @@ class HomeFragment : Fragment() {
         homeFragment = FragmentHomeBinding.inflate(inflater)
 
         homeFragment.pledge.setOnClickListener {
-            pledge()
+            (activity as MainPage).change(PledgeFragment())
         }
 
         homeFragment.pledgeImage.setOnClickListener {
-            pledge()
+            (activity as MainPage).change(PledgeFragment())
         }
 
         homeFragment.blood.setOnClickListener {

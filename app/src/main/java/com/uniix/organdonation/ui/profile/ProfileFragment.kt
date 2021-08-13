@@ -40,7 +40,7 @@ class ProfileFragment : Fragment() {
     ): View? {
 
         auth = FirebaseAuth.getInstance()
-        profileData()
+        fetchData()
         profileFragment = FragmentProfileBinding.inflate(inflater)
         return profileFragment.root
 

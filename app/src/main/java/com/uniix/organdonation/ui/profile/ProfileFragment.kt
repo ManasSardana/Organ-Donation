@@ -11,9 +11,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.firebase.auth.FirebaseAuth
-import com.uniix.organdonation.MainPage
 import com.uniix.organdonation.databinding.FragmentProfileBinding
-import com.uniix.organdonation.ui.pledge.PledgeFragment
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -42,7 +40,7 @@ class ProfileFragment : Fragment() {
     ): View? {
 
         auth = FirebaseAuth.getInstance()
-        fetchData()
+        profileData()
         profileFragment = FragmentProfileBinding.inflate(inflater)
         return profileFragment.root
 

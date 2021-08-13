@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Organ Donation</string>
+    <string name="app_name">OrgDo</string>
     <string name="title_activity_main_page">MainPage</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -78,4 +78,5 @@
     <string name="more_options">More Options</string>
     <string name="let_us_save_a_life_be_a_donor">Let Us Save a Life, Be a Donor</string>
     <string name="delete_profile">Delete Profile</string>
+    <string name="be_a_donor">Be a Donor</string>
 </resources>

@@ -16,7 +16,6 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.uniix.organdonation.databinding.ActivityMainPageBinding
 import com.uniix.organdonation.ui.help.HelpInstructionFragment
@@ -39,8 +38,7 @@ class MainPage : AppCompatActivity() {
         setSupportActionBar(binding.appBarMainPage.toolbar)
 
         binding.appBarMainPage.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Help and Documentation", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            Toast.makeText(this, "Help and Documentation", Toast.LENGTH_LONG).show()
             supportFragmentManager.beginTransaction()
                 .replace(android.R.id.content,HelpInstructionFragment()).addToBackStack(null).commit()
         }

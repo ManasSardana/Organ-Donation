@@ -54,54 +54,31 @@ class ProfileFragment : Fragment() {
                 for (i in 0 until profileArray.length()) {
                     val userDetails: JSONObject = profileArray.get(i) as JSONObject
                     if (auth.currentUser!!.email == userDetails.getString("email")) {
-                        profileData()
+                        name = userDetails.getString("name").toString()
+                        dob = userDetails.getString("dob").toString()
+                        bloodGroup = userDetails.getString("bloodgroup").toString()
+                        gender = userDetails.getString("gender").toString()
+                        bodyPart = userDetails.getString("bodypart").toString()
+                        address = userDetails.getString("address").toString()
+                        cityPincode = userDetails.getString("citypincode").toString()
+                        email = userDetails.getString("email").toString()
+                        phoneNumber = userDetails.getString("phonenumber").toString()
                         break
-                    } else {
-                        //(activity as MainPage).change(PledgeFragment())
                     }
+                    profileFragment.profileName.text = name
+                    profileFragment.profileDob.text = dob
+                    profileFragment.profileBloodGroup.text = bloodGroup
+                    profileFragment.profileGender.text = gender
+                    profileFragment.profileParts.text = bodyPart
+                    profileFragment.profileAddress.text = address
+                    profileFragment.profileCityPincode.text = cityPincode
+                    profileFragment.profileEmail.text = email
+                    profileFragment.profilePhoneNumber.text = phoneNumber
                 }
             }, {
                 //Log.d("Error",it.toString())
                 if (it.networkResponse.statusCode == 404) {
                     Toast.makeText(context, "Please try again later !!", Toast.LENGTH_LONG).show()
-                }
-            })
-        request.add(stringRequest)
-    }
-
-    private fun profileData() {
-        val request: RequestQueue = Volley.newRequestQueue(context)  //url
-
-        val stringRequest: StringRequest = StringRequest(
-            Request.Method.GET,"https://shopwithankit.000webhostapp.com/OrgDo/fetch_data.php", {
-                val profileArray: JSONArray = JSONArray(it)
-                for (i in 0 until profileArray.length()) {
-                    val userDetails: JSONObject = profileArray.get(i) as JSONObject
-                    name = userDetails.getString("name").toString()
-                    dob = userDetails.getString("dob").toString()
-                    bloodGroup = userDetails.getString("bloodgroup").toString()
-                    gender = userDetails.getString("gender").toString()
-                    bodyPart = userDetails.getString("bodypart").toString()
-                    address = userDetails.getString("address").toString()
-                    cityPincode = userDetails.getString("citypincode").toString()
-                    email = userDetails.getString("email").toString()
-                    phoneNumber = userDetails.getString("phonenumber").toString()
-                }
-
-                profileFragment.profileName.text = name
-                profileFragment.profileDob.text = dob
-                profileFragment.profileBloodGroup.text = bloodGroup
-                profileFragment.profileGender.text = gender
-                profileFragment.profileParts.text = bodyPart
-                profileFragment.profileAddress.text = address
-                profileFragment.profileCityPincode.text = cityPincode
-                profileFragment.profileEmail.text = email
-                profileFragment.profilePhoneNumber.text = phoneNumber
-
-            }, {
-                //Log.d("Error",it.toString())
-                if( it.networkResponse.statusCode == 404) {
-                    profileData()
                 }
             })
         request.add(stringRequest)

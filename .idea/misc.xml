@@ -26,7 +26,9 @@
         <entry key="..\:/Users/Manas Sardana/AndroidStudioProjects/OrganDonation/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/above_home_image.xml" value="0.22072368421052632" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/below_home_image.xml" value="0.22072368421052632" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/circle.xml" value="0.22072368421052632" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/delete_profile_button.xml" value="0.22072368421052632" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/donor_list_background.xml" value="0.22072368421052632" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_baseline_help_24.xml" value="0.3106481481481482" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_baseline_person_pin_circle.xml" value="0.3106481481481482" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.3106481481481482" />
@@ -51,7 +53,7 @@
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/app_bar_main_page.xml" value="0.29259259259259257" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/content_main_page.xml" value="0.29259259259259257" />
-        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/donor_details.xml" value="0.20789473684210527" />
+        <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/donor_details.xml" value="0.22" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_about_us.xml" value="0.2" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_blood_donation.xml" value="0.2" />
         <entry key="..\:/Users/thean/AndroidStudioProjects/Organ-Donation/app/src/main/res/layout/fragment_eye_donation.xml" value="0.22" />

@@ -83,4 +83,9 @@
     <string name="eye_donation_hospital">Eye Donation Hospitals</string>
     <string name="blood_donation_hospitals">Blood Donation Hospitals</string>
     <string name="instructions">Instructions</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="donor_list">Donor List</string>
 </resources>

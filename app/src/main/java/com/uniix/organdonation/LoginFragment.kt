@@ -1,19 +1,15 @@
 package com.uniix.organdonation
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 import com.uniix.organdonation.databinding.ActivityLoginFragmentBinding
-import kotlin.math.log
 
 class LoginFragment : Fragment() {
 
@@ -41,7 +37,12 @@ class LoginFragment : Fragment() {
             val email = loginFragment.loginEmail.text.toString()
             val password = loginFragment.loginPassword.text.toString()
             if (email.trim().isNotEmpty() && password.trim().isNotEmpty()) {
-                login(email, password)
+                if(email.trim() == "ankitsingh21092001@gmail.com" && password.trim() == "orgdo13579"){
+                    activity?.startActivity(Intent(context, DonorListForAdmin::class.java))
+                    activity?.finish()
+                } else {
+                    login(email, password)
+                }
             } else {
                 Snackbar.make(loginFragment.root,
                     "Please enter the credentials",

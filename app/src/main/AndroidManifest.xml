@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrganDonation">
         <activity
+            android:name=".DonorListForAdmin"
+            android:exported="true" />
+        <activity
             android:name=".ui.resetpassword.ResetPasswordFragment"
             android:exported="true"
             tools:ignore="Instantiatable" />

@@ -11,7 +11,9 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.firebase.auth.FirebaseAuth
+import com.uniix.organdonation.MainPage
 import com.uniix.organdonation.databinding.FragmentProfileBinding
+import com.uniix.organdonation.ui.resetpassword.ResetPasswordFragment
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -42,6 +44,9 @@ class ProfileFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
         fetchData()
         profileFragment = FragmentProfileBinding.inflate(inflater)
+        profileFragment.resetPassword.setOnClickListener {
+            (activity as MainPage).change(ResetPasswordFragment())
+        }
         return profileFragment.root
 
     }

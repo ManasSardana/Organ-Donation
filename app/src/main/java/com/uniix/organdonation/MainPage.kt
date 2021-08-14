@@ -87,6 +87,7 @@ class MainPage : AppCompatActivity() {
         dialog.setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
             auth.signOut()
             finish()
+            startActivity(Intent(this, MainActivity::class.java))
         }
         dialog.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int ->
             dialogInterface.dismiss()

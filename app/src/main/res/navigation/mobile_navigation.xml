@@ -54,4 +54,16 @@
         android:label="@string/menu_hospitals"
         tools:layout="@layout/fragment_hospitals" />
 
+    <fragment
+        android:id="@+id/nav_instructions"
+        android:name="com.uniix.organdonation.ui.help.HelpInstructionFragment"
+        android:label="@string/instructions"
+        tools:layout="@layout/fragment_help_instruction" />
+
+    <fragment
+        android:id="@+id/nav_resetpassword"
+        android:name="com.uniix.organdonation.ui.resetpassword.ResetPasswordFragment"
+        android:label="Reset Password"
+        tools:layout="@layout/fragment_reset_password" />
+
 </navigation>

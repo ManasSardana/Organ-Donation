@@ -194,11 +194,13 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginBottom="64dp"
                 android:drawablePadding="5dp"
                 android:text="Hope this application is helpful."
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/black"
                 app:drawableLeftCompat="@drawable/ic_baseline_arrow_right_24"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />

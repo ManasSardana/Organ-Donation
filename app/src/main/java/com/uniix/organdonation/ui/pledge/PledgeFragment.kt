@@ -1,6 +1,9 @@
 package com.uniix.organdonation.ui.pledge
 
+import android.app.DatePickerDialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -20,7 +23,8 @@ import com.uniix.organdonation.MainPage
 import com.uniix.organdonation.R
 import com.uniix.organdonation.databinding.FragmentPledgeBinding
 import com.uniix.organdonation.ui.help.HelpInstructionFragment
-import com.uniix.organdonation.ui.home.HomeFragment
+import java.util.*
+import kotlin.collections.HashMap
 
 class PledgeFragment : Fragment() {
     private lateinit var pledgeFragment : FragmentPledgeBinding
@@ -28,6 +32,8 @@ class PledgeFragment : Fragment() {
     private var bloodGroupOptions = arrayListOf<Any>("A-", "A+", "B-", "B+", "AB-", "AB+", "O-", "O+")
     //Variable for Firebase Authentication
     private lateinit var auth: FirebaseAuth
+    //Variable to set date
+    private lateinit var dateSetListener: DatePickerDialog.OnDateSetListener
 
     private lateinit var name: String
     private lateinit var dob: String
@@ -67,6 +73,27 @@ class PledgeFragment : Fragment() {
 
             }
 
+        pledgeFragment.pledgeDob.setOnClickListener {
+            val calender = Calendar.getInstance()
+            val year = calender.get(Calendar.YEAR)
+            val month = calender.get(Calendar.MONTH)
+            val day = calender.get(Calendar.DAY_OF_MONTH)
+
+            val dialog = DatePickerDialog(
+                requireContext()
+                , android.R.style.Theme_Holo_Light_Dialog_MinWidth
+                , dateSetListener
+                , year, month, day)
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.show()
+
+        }
+
+        dateSetListener = DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
+            val date = "$day/${month+1}/$year"
+            pledgeFragment.pledgeDob.setText(date)
+        }
+
         pledgeFragment.instructionsAndRules.setOnClickListener {
             (activity as MainPage).change(HelpInstructionFragment())
         }
@@ -89,6 +116,7 @@ class PledgeFragment : Fragment() {
                 someBodyParts()
             }
 
+
             address = pledgeFragment.pledgeAddress.text.toString()
             cityPincode = pledgeFragment.pledgeCityPincode.text.toString()
             email = pledgeFragment.pledgeEmail.text.toString()
@@ -97,7 +125,19 @@ class PledgeFragment : Fragment() {
             if(name.trim().isNotEmpty() && dob.trim().isNotEmpty() && address.trim().isNotEmpty()
                 && cityPincode.trim().isNotEmpty() && email.trim().isNotEmpty() && phoneNumber.trim().isNotEmpty()) {
                     if (email == auth.currentUser!!.email) {
-                        sendDataOnServer(name, dob, bloodGroup, gender, bodyPart, address, cityPincode, email, phoneNumber)
+                        if (!pledgeFragment.selectParts.isChecked) {
+                            if (pledgeFragment.checkBox1.isChecked or pledgeFragment.checkBox2.isChecked
+                                or pledgeFragment.checkBox3.isChecked or pledgeFragment.checkBox4.isChecked
+                                or pledgeFragment.checkBox5.isChecked or pledgeFragment.checkBox6.isChecked){
+                                Snackbar.make(
+                                    pledgeFragment.root,
+                                    "Please Select the 'OR' option to choose from selective organs !!",
+                                    Snackbar.LENGTH_LONG
+                                ).show()
+                            }
+                        } else {
+                            sendDataOnServer(name, dob, bloodGroup, gender, bodyPart, address, cityPincode, email, phoneNumber)
+                        }
                     } else {
                         Snackbar.make(
                             pledgeFragment.root,

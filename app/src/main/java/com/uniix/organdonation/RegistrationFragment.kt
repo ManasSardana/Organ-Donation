@@ -8,7 +8,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.uniix.organdonation.databinding.ActivityRegistrationFragmentBinding
 
 class RegistrationFragment : Fragment() {
@@ -32,12 +33,18 @@ class RegistrationFragment : Fragment() {
             val email = registrationFragment.registrationEmail.text.toString()
             val password = registrationFragment.registrationPassword.text.toString()
             val confirmPassword = registrationFragment.registrationConfirmPassword.text.toString()
-            if(email.trim().isNotEmpty() && password.trim().isNotEmpty() && confirmPassword.trim().isNotEmpty()
-                && password == confirmPassword){
-                createAccount(email, confirmPassword)
+            if(email.trim().isNotEmpty() && password.trim().isNotEmpty()
+                && confirmPassword.trim().isNotEmpty()){
+                    if(password == confirmPassword){
+                        createAccount(email, confirmPassword)
+                    } else {
+                        Snackbar.make(registrationFragment.root,
+                            "Password Mismatch !!",
+                            Snackbar.LENGTH_LONG).show()
+                    }
             } else {
                 Snackbar.make(registrationFragment.root,
-                    "Please enter the credentials",
+                    "Please enter the credentials !!",
                     Snackbar.LENGTH_LONG).show()
             }
         }
@@ -60,17 +67,26 @@ class RegistrationFragment : Fragment() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(context,
-                                "Please Check Your Email for verification to Complete Your Registration",
-                                Toast.LENGTH_SHORT).show()
+                                "Please Check Your Email for verification to Complete Your Registration.",
+                                Toast.LENGTH_LONG).show()
                             (activity as MainActivity).change(LoginFragment())
                         } else {
                             // If sign in fails, display a message to the user
-                            Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                            if (task.exception is FirebaseAuthUserCollisionException) {
+                                Toast.makeText(context, "User already registered.", Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                            }
                         }
                     }
             } else {
                 // If sign in fails, display a message to the user
-                Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                if (task.exception is FirebaseAuthWeakPasswordException){
+                    Toast.makeText(context, "Weak Password. Please use both alphabet and number !!"
+                        , Toast.LENGTH_LONG).show()
+                } else{
+                    Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

@@ -1,9 +1,15 @@
 package com.uniix.organdonation.ui.pledge
 
+import android.Manifest
+import android.app.Activity
 import android.app.DatePickerDialog
+import android.app.ProgressDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,13 +18,19 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.SpinnerAdapter
+import android.widget.Toast
+import androidx.core.content.ContextCompat.checkSelfPermission
 import androidx.fragment.app.Fragment
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.google.android.gms.tasks.Continuation
+import com.google.android.gms.tasks.Task
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.UploadTask
 import com.uniix.organdonation.MainPage
 import com.uniix.organdonation.R
 import com.uniix.organdonation.databinding.FragmentPledgeBinding
@@ -32,6 +44,7 @@ class PledgeFragment : Fragment() {
     private var bloodGroupOptions = arrayListOf<Any>("A-", "A+", "B-", "B+", "AB-", "AB+", "O-", "O+")
     //Variable for Firebase Authentication
     private lateinit var auth: FirebaseAuth
+    private val storage = FirebaseStorage.getInstance()
     //Variable to set date
     private lateinit var dateSetListener: DatePickerDialog.OnDateSetListener
 
@@ -44,6 +57,10 @@ class PledgeFragment : Fragment() {
     private lateinit var cityPincode: String
     private lateinit var email: String
     private lateinit var phoneNumber: String
+    private lateinit var userDoc:String
+    private var downloadUrl: String = "Null"
+
+    private lateinit var progressDialog: ProgressDialog
 
     override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?
     ): View? {
@@ -68,7 +85,7 @@ class PledgeFragment : Fragment() {
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {
-                    TODO("Not yet implemented")
+                    //ToDo
                 }
 
             }
@@ -89,7 +106,7 @@ class PledgeFragment : Fragment() {
 
         }
 
-        dateSetListener = DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
+        dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, day ->
             val date = "$day/${month+1}/$year"
             pledgeFragment.pledgeDob.setText(date)
         }
@@ -98,16 +115,28 @@ class PledgeFragment : Fragment() {
             (activity as MainPage).change(HelpInstructionFragment())
         }
 
+        pledgeFragment.docImageText.setOnClickListener {
+            checkPermissionForImage()
+        }
+        pledgeFragment.docImage.setOnClickListener {
+            checkPermissionForImage()
+        }
+
         pledgeFragment.submit.setOnClickListener {
+            //Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
             name = pledgeFragment.pledgeName.text.toString()
             dob = pledgeFragment.pledgeDob.text.toString()
 
-            gender = if(pledgeFragment.pledgeMale.isChecked) {
-                "Male"
-            } else if(pledgeFragment.pledgeFemale.isChecked) {
-                "Female"
-            } else {
-                "Other"
+            gender = when {
+                pledgeFragment.pledgeMale.isChecked -> {
+                    "Male"
+                }
+                pledgeFragment.pledgeFemale.isChecked -> {
+                    "Female"
+                }
+                else -> {
+                    "Other"
+                }
             }
 
             bodyPart = if(pledgeFragment.allParts.isChecked){
@@ -116,28 +145,42 @@ class PledgeFragment : Fragment() {
                 someBodyParts()
             }
 
-
             address = pledgeFragment.pledgeAddress.text.toString()
             cityPincode = pledgeFragment.pledgeCityPincode.text.toString()
             email = pledgeFragment.pledgeEmail.text.toString()
             phoneNumber = pledgeFragment.pledgePhoneNumber.text.toString()
+            userDoc = downloadUrl
 
-            if(name.trim().isNotEmpty() && dob.trim().isNotEmpty() && address.trim().isNotEmpty()
+            if(name.trim().isNotEmpty() && dob.trim().isNotEmpty() && address.trim().isNotEmpty() && gender.isNotEmpty() && bodyPart.isNotEmpty()
                 && cityPincode.trim().isNotEmpty() && email.trim().isNotEmpty() && phoneNumber.trim().isNotEmpty()) {
                     if (email == auth.currentUser!!.email) {
-                        if (!pledgeFragment.selectParts.isChecked) {
+                        /*if (!pledgeFragment.selectParts.isChecked) {
                             if (pledgeFragment.checkBox1.isChecked or pledgeFragment.checkBox2.isChecked
                                 or pledgeFragment.checkBox3.isChecked or pledgeFragment.checkBox4.isChecked
-                                or pledgeFragment.checkBox5.isChecked or pledgeFragment.checkBox6.isChecked){
+                                or pledgeFragment.checkBox5.isChecked or pledgeFragment.checkBox6.isChecked) {
                                 Snackbar.make(
                                     pledgeFragment.root,
                                     "Please Select the 'OR' option to choose from selective organs !!",
                                     Snackbar.LENGTH_LONG
                                 ).show()
                             }
-                        } else {
-                            sendDataOnServer(name, dob, bloodGroup, gender, bodyPart, address, cityPincode, email, phoneNumber)
-                        }
+                                /*if(userDoc.isEmpty() || downloadUrl.isEmpty()){
+                                    Snackbar.make(
+                                        pledgeFragment.root,
+                                        "Please Upload the Medical Certificate !!",
+                                        Snackbar.LENGTH_LONG
+                                    ).show()
+                            }*/
+                        } else if(!pledgeFragment.allParts.isChecked){
+                            Snackbar.make(
+                                pledgeFragment.root,
+                                "Please Select Organs !!",
+                                Snackbar.LENGTH_LONG
+                            ).show()
+                        } else if(pledgeFragment.allParts.isChecked || pledgeFragment.selectParts.isChecked) {*/
+                            Log.d("Data", "$name, $dob, $bloodGroup, $gender, $bodyPart, $address, $cityPincode, $email, $phoneNumber, $userDoc")
+                            sendDataOnServer(name, dob, bloodGroup, gender, bodyPart, address, cityPincode, email, phoneNumber, userDoc)
+                        //}
                     } else {
                         Snackbar.make(
                             pledgeFragment.root,
@@ -198,8 +241,10 @@ class PledgeFragment : Fragment() {
         address: String,
         cityPincode: String,
         email: String,
-        phoneNumber: String
+        phoneNumber: String,
+        userDoc: String
     ) {
+        Log.d("Data", "$name, $dob, $bloodGroup, $gender, $bodyPart, $address, $cityPincode, $email, $phoneNumber, $userDoc")
         val requestQueue = Volley.newRequestQueue(context)
 
         val stringRequest = object : StringRequest(
@@ -225,15 +270,91 @@ class PledgeFragment : Fragment() {
                 params["dob"] = dob
                 params["bloodgroup"] = bloodGroup
                 params["gender"] = gender
-                params["bodypart"] = bodyPart.toString()
+                params["bodypart"] = bodyPart
                 params["address"] = address
                 params["citypincode"] = cityPincode
                 params["email"] = email
                 params["phonenumber"] = phoneNumber
+                params["medicalcertificate"] = userDoc
                 return params
             }
 
         }
         requestQueue.add(stringRequest)
     }
+
+    private fun checkPermissionForImage() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if ((checkSelfPermission(requireContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED)
+                && (checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED)
+            ) {
+                val permission = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
+                val permissionWrite = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                requestPermissions(
+                    permission,
+                    1001
+                ) // GIVE AN INTEGER VALUE FOR PERMISSION_CODE_READ LIKE 1001
+                requestPermissions(
+                    permissionWrite,
+                    1002
+                ) // GIVE AN INTEGER VALUE FOR PERMISSION_CODE_WRITE LIKE 1002
+            } else {
+                pickImageFromGallery()
+            }
+        }
+    }
+
+    private fun pickImageFromGallery() {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(
+            intent,
+            1000
+        ) // GIVE AN INTEGER VALUE FOR IMAGE_PICK_CODE LIKE 1000
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && requestCode == 1000) {
+            data?.data?.let {
+                pledgeFragment.docImage.setImageURI(it)
+                startUpload(it)
+            }
+        }
+    }
+
+    private fun startUpload(filePath: Uri) {
+        progressDialog =  createProgressDialog("Uploading Image...", false)
+        progressDialog.show()
+        val ref = storage.reference.child("uploads/" + auth.uid.toString())
+        val uploadTask = ref.putFile(filePath)
+        uploadTask.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->
+            if (!task.isSuccessful) {
+                task.exception?.let {
+                    throw it
+                }
+            }
+            return@Continuation ref.downloadUrl
+        }).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                downloadUrl = task.result.toString()
+                progressDialog.dismiss()
+                Toast.makeText(context, "Image Upload Successful!!", Toast.LENGTH_LONG).show()
+            } else {
+                // Handle failures
+                Toast.makeText(context, "Something went wrong. Please try again!", Toast.LENGTH_LONG).show()
+            }
+        }.addOnFailureListener {
+            Toast.makeText(context, "Something went wrong. Please try again!", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun createProgressDialog(message: String, isCancelable: Boolean): ProgressDialog {
+        return ProgressDialog(context).apply {
+            setCancelable(isCancelable)
+            setCanceledOnTouchOutside(false)
+            setMessage(message)
+        }
+    }
+
 }

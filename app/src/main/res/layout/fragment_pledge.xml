@@ -331,13 +331,15 @@
                 android:drawableStart="@drawable/ic_phone"
                 android:drawablePadding="8dp"
                 android:ems="10"
+                android:clickable="true"
                 android:hint="@string/enter_your_phone_number"
                 android:inputType="phone"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pledge_email"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck"
+                android:focusable="true" />
 
             <Spinner
                 android:id="@+id/blood_group"
@@ -367,17 +369,63 @@
                 android:id="@+id/instructions_and_rules"
                 android:layout_width="375dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:lineSpacingExtra="4dp"
                 android:maxLines="2"
                 android:minLines="2"
                 android:text="@string/instructions_and_rules"
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doc_image_text"
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/doc_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:background="@drawable/above_doc"
+                android:contentDescription="@drawable/ic_date"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pledge_phone_number"
-                tools:ignore="TextContrastCheck" />
+                app:srcCompat="@drawable/ic_date" />
+
+            <TextView
+                android:id="@+id/doc_image_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                android:background="@drawable/below_doc"
+                android:gravity="center"
+                android:lines="2"
+                android:padding="2dp"
+                android:text="@string/upload_your_medical_certificate"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doc_image" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.uniix.organdonation.databinding.ActivityLoginFragmentBinding
 
 class LoginFragment : Fragment() {
@@ -39,13 +41,13 @@ class LoginFragment : Fragment() {
             if (email.trim().isNotEmpty() && password.trim().isNotEmpty()) {
                 if(email.trim() == "ankitsingh21092001@gmail.com" && password.trim() == "orgdo13579"){
                     activity?.startActivity(Intent(context, DonorListForAdmin::class.java))
-                    activity?.finish()
+                    //activity?.finish()
                 } else {
                     login(email, password)
                 }
             } else {
                 Snackbar.make(loginFragment.root,
-                    "Please enter the credentials",
+                    "Please enter the credentials !!",
                     Snackbar.LENGTH_LONG).show()
             }
             //activity?.startActivity(Intent(context, MainPage::class.java))
@@ -76,13 +78,18 @@ class LoginFragment : Fragment() {
                         activity?.finish()
                     } else {
                         // If sign in fails, display a message to the user.
-                        Toast.makeText(context, "Please verify the email first!!",
-                            Toast.LENGTH_SHORT).show()
-                    }
+                        Toast.makeText(context, "Please verify the email first !!",
+                            Toast.LENGTH_SHORT).show()                    }
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(context, "Something went wrong, Please try again later!!",
-                        Toast.LENGTH_SHORT).show()
+                    if (task.exception is FirebaseAuthInvalidCredentialsException ||
+                        task.exception is FirebaseAuthInvalidUserException) {
+                        Toast.makeText(context, "Invalid Credentials !!",
+                            Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(context, "Something went wrong, Please try again later !!",
+                            Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
     }

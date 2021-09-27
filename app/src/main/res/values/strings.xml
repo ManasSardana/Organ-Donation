@@ -88,4 +88,6 @@
     <string name="new_password">New Password</string>
     <string name="confirm_new_password">Confirm New Password</string>
     <string name="donor_list">Donor List</string>
+    <string name="upload_your_photo">Upload your Photo</string>
+    <string name="upload_your_medical_certificate">Upload your Medical Certificate</string>
 </resources>

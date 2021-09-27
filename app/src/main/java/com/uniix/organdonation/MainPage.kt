@@ -35,6 +35,8 @@ class MainPage : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show()
+
         setSupportActionBar(binding.appBarMainPage.toolbar)
 
         binding.appBarMainPage.fab.setOnClickListener { view ->

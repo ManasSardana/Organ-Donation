@@ -42,7 +42,8 @@ class DonorListForAdmin : AppCompatActivity() {
                         , (userDetails.getString("bodypart").toString())
                         , (userDetails.getString("citypincode").toString())
                         , (userDetails.getString("email").toString())
-                        , (userDetails.getString("phonenumber").toString()))
+                        , (userDetails.getString("phonenumber").toString())
+                        , (userDetails.getString("medicalcertificate").toString()))
                     data.add(profileModel)
                 }
                 //Log.d("Data", data[0].name)

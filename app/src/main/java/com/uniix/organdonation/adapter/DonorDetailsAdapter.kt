@@ -27,7 +27,7 @@ class DonorDetailsAdapter (private val data: ArrayList<ProfileModel>) : Recycler
         holder.donorDetailsAdapter.donorEmail.text = data[position].email
         holder.donorDetailsAdapter.donorPhoneNumber.text = data[position].phoneNumber
         holder.donorDetailsAdapter.donorParts.text = data[position].bodyPart
-
+        holder.donorDetailsAdapter.donorMediCert.text = "Medical Certificate URL: " + data[position].userDoc
     }
 
     override fun getItemCount(): Int {

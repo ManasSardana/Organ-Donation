@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.uniix.organdonation.MainActivity
 import com.uniix.organdonation.databinding.FragmentResetPasswordBinding
 
@@ -33,8 +35,7 @@ class ResetPasswordFragment : Fragment() {
             val newPassword = resetPasswordFragment.newPassword.text.toString()
             val confirmNewPassword = resetPasswordFragment.confirmNewPassword.text.toString()
             if (oldPassword.trim().isNotEmpty() && newPassword.trim().isNotEmpty()
-                && confirmNewPassword.trim().isNotEmpty()
-            ) {
+                && confirmNewPassword.trim().isNotEmpty()) {
                 if (oldPassword != newPassword) {
                     if (newPassword == confirmNewPassword) {
                         val user = auth.currentUser!!
@@ -75,11 +76,21 @@ class ResetPasswordFragment : Fragment() {
                                             }
                                         }
                                 } else {
-                                    Snackbar.make(
-                                        resetPasswordFragment.root,
-                                        "Re-authentication Failed !!",
-                                        Snackbar.LENGTH_LONG
-                                    ).show()
+                                    if (it.exception is FirebaseAuthInvalidCredentialsException ||
+                                        it.exception is FirebaseAuthInvalidUserException
+                                    ) {
+                                        Snackbar.make(
+                                            resetPasswordFragment.root,
+                                            "Invalid credentials !!",
+                                            Snackbar.LENGTH_LONG
+                                        ).show()
+                                    } else {
+                                        Snackbar.make(
+                                            resetPasswordFragment.root,
+                                            "Re-authentication Failed !!",
+                                            Snackbar.LENGTH_LONG
+                                        ).show()
+                                    }
                                 }
                             }
 

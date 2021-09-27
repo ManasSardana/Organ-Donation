@@ -21,7 +21,6 @@ class ProfileFragment : Fragment() {
 
     //Initializing Variables
     private lateinit var profileFragment: FragmentProfileBinding
-
     //Variable for Firebase Authentication
     private lateinit var auth: FirebaseAuth
 

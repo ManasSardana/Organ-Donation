@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.uniix.organdonation.databinding.ActivityForgotPasswordFragmentBinding
 
 class ForgotPasswordFragment : Fragment() {
 
     //Initializing Variables
-    lateinit var forgotPasswordFragment: ActivityForgotPasswordFragmentBinding
+    private lateinit var forgotPasswordFragment: ActivityForgotPasswordFragmentBinding
     //Variable for Firebase Authentication
     private lateinit var auth: FirebaseAuth
 
@@ -35,17 +37,24 @@ class ForgotPasswordFragment : Fragment() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Snackbar.make(forgotPasswordFragment.root,
-                                "Password Reset Link Send to your Email",
+                                "Password Reset Link Send to your Email !!",
                                 Snackbar.LENGTH_LONG).show()
                         } else {
-                            Snackbar.make(forgotPasswordFragment.root,
-                                "Something went wrong, Please try again later!!",
-                                Snackbar.LENGTH_LONG).show()
+                            if (task.exception is FirebaseAuthInvalidCredentialsException ||
+                                task.exception is FirebaseAuthInvalidUserException){
+                                Snackbar.make(forgotPasswordFragment.root,
+                                    "Invalid Credentials !!",
+                                    Snackbar.LENGTH_LONG).show()
+                            } else {
+                                Snackbar.make(forgotPasswordFragment.root,
+                                    "Something went wrong, Please try again later !!",
+                                    Snackbar.LENGTH_LONG).show()
+                            }
                         }
                     }
             } else {
                 Snackbar.make(forgotPasswordFragment.root,
-                    "Please enter the credentials",
+                    "Please enter the credentials !!",
                     Snackbar.LENGTH_LONG).show()
             }
         }

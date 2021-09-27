@@ -9,5 +9,5 @@ class ProfileModel(
     val bodyPart: String,
     val cityPincode: String,
     val email: String,
-    val phoneNumber: String, ) {
-}
+    val phoneNumber: String,
+    val userDoc: String) { }

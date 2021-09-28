@@ -154,6 +154,7 @@ class PledgeFragment : Fragment() {
             if(name.trim().isNotEmpty() && dob.trim().isNotEmpty() && address.trim().isNotEmpty() && gender.isNotEmpty() && bodyPart.isNotEmpty()
                 && cityPincode.trim().isNotEmpty() && email.trim().isNotEmpty() && phoneNumber.trim().isNotEmpty()) {
                     if (email == auth.currentUser!!.email) {
+                        sendDataOnServer(name, dob, bloodGroup, gender, bodyPart, address, cityPincode, email, phoneNumber, userDoc)
                         /*if (!pledgeFragment.selectParts.isChecked) {
                             if (pledgeFragment.checkBox1.isChecked or pledgeFragment.checkBox2.isChecked
                                 or pledgeFragment.checkBox3.isChecked or pledgeFragment.checkBox4.isChecked
@@ -177,10 +178,10 @@ class PledgeFragment : Fragment() {
                                 "Please Select Organs !!",
                                 Snackbar.LENGTH_LONG
                             ).show()
-                        } else if(pledgeFragment.allParts.isChecked || pledgeFragment.selectParts.isChecked) {*/
+                        } else if(pledgeFragment.allParts.isChecked || pledgeFragment.selectParts.isChecked) {
                             Log.d("Data", "$name, $dob, $bloodGroup, $gender, $bodyPart, $address, $cityPincode, $email, $phoneNumber, $userDoc")
                             sendDataOnServer(name, dob, bloodGroup, gender, bodyPart, address, cityPincode, email, phoneNumber, userDoc)
-                        //}
+                        }*/
                     } else {
                         Snackbar.make(
                             pledgeFragment.root,
@@ -244,7 +245,7 @@ class PledgeFragment : Fragment() {
         phoneNumber: String,
         userDoc: String
     ) {
-        Log.d("Data", "$name, $dob, $bloodGroup, $gender, $bodyPart, $address, $cityPincode, $email, $phoneNumber, $userDoc")
+        //Log.d("Data", "$name, $dob, $bloodGroup, $gender, $bodyPart, $address, $cityPincode, $email, $phoneNumber, $userDoc")
         val requestQueue = Volley.newRequestQueue(context)
 
         val stringRequest = object : StringRequest(

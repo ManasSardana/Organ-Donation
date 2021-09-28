@@ -90,4 +90,5 @@
     <string name="donor_list">Donor List</string>
     <string name="upload_your_photo">Upload your Photo</string>
     <string name="upload_your_medical_certificate">Upload your Medical Certificate</string>
+    <string name="medical_certificate"><a href="https://en.wikipedia.org/wiki/Organ_donation">Medical Certificate</a></string>
 </resources>

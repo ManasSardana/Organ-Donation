@@ -1,5 +1,7 @@
 package com.uniix.organdonation.adapter
 
+import android.text.Html
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +29,10 @@ class DonorDetailsAdapter (private val data: ArrayList<ProfileModel>) : Recycler
         holder.donorDetailsAdapter.donorEmail.text = data[position].email
         holder.donorDetailsAdapter.donorPhoneNumber.text = data[position].phoneNumber
         holder.donorDetailsAdapter.donorParts.text = data[position].bodyPart
-        holder.donorDetailsAdapter.donorMediCert.text = "Medical Certificate URL: " + data[position].userDoc
+        //holder.donorDetailsAdapter.donorMediCert.text = /*"Medical Certificate URL: " +*/ data[position].userDoc
+        val url = data[position].userDoc
+        holder.donorDetailsAdapter.donorMediCert.text = Html.fromHtml("<a href=\"$url\"> Medical Certificate </a>")
+        holder.donorDetailsAdapter.donorMediCert.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun getItemCount(): Int {
